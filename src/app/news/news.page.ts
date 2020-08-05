@@ -7,15 +7,15 @@ import { ApiService } from "../api.service";
   styleUrls: ["./news.page.scss"],
 })
 export class NewsPage implements OnInit {
-  articles: any;
+  data: any;
 
   constructor(private http: ApiService) {
     this.loadNews();
   }
   loadNews() {
-    this.http.getNews().subscribe((news) => {
-      this.articles = news;
-      console.log(this.articles);
+    this.http.getNews().subscribe((data) => {
+      this.data = data;
+      console.log(this.data);
     });
   }
 
