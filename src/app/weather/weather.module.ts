@@ -1,20 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { WeatherPageRoutingModule } from './weather-routing.module';
+import { WeatherPageRoutingModule } from "./weather-routing.module";
 
-import { WeatherPage } from './weather.page';
+import { WeatherPage } from "./weather.page";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    WeatherPageRoutingModule
+    WeatherPageRoutingModule,
+    HttpClientModule,
   ],
-  declarations: [WeatherPage]
+  declarations: [WeatherPage],
 })
 export class WeatherPageModule {}
