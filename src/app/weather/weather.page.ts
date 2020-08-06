@@ -8,7 +8,7 @@ import { ApiService } from "../api.service";
 })
 export class WeatherPage implements OnInit {
   data: any;
-
+  desc: any;
   constructor(private http: ApiService) {
     this.loadWeather();
   }
@@ -17,6 +17,8 @@ export class WeatherPage implements OnInit {
     this.http.getWeather().subscribe((data) => {
       this.data = data;
       console.log(this.data);
+      this.desc = this.data.weather[0].description;
+      console.log(this.desc);
     });
   }
 
