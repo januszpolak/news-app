@@ -1,4 +1,5 @@
 .wrap {
+  background-color: #091921;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +13,10 @@
   height: 100vh;
   font-family: "Rowdies", cursive;
   h1 {
-    color: rgb(117, 10, 2);
+    color: #ee004f;
     font-size: 5rem;
+  }
+  h6 {
+    color: white;
   }
 }

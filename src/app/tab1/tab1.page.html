@@ -15,7 +15,7 @@
 
   <div class="wrap">
     <h1>Witaj !</h1>
-    <h6>Dzisiaj jest: {{todayDate | date:'fullDate'}}</h6>
+    <h6>Dzisiaj jest: {{todayDate | date:'d MMMM y'}}</h6>
     <div [ngSwitch]="day">
       <h6 *ngSwitchCase="1">Poniedziałek</h6>
       <h6 *ngSwitchCase="2">Wtorek</h6>
