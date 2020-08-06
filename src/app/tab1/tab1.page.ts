@@ -6,7 +6,9 @@ import { Component } from "@angular/core";
   styleUrls: ["tab1.page.scss"],
 })
 export class Tab1Page {
-  todayDate: Date = new Date();
+  todayDate = Date.now();
+
+  day = new Date().getDay();
 
   constructor() {}
 }

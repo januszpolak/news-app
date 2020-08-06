@@ -15,7 +15,7 @@ export class ApiService {
 
   getWeather() {
     return this.http.get(
-      "https://api.openweathermap.org/data/2.5/weather?q=Krakow&appid=a051e71017506e78401e478e6128563d&units=metric"
+      `https://api.openweathermap.org/data/2.5/weather?q=Krakow&appid=a051e71017506e78401e478e6128563d&units=metric`
     );
   }
 }
