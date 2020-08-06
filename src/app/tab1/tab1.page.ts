@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { ApiService } from "../api.service";
 
 @Component({
   selector: "app-tab1",
@@ -10,5 +11,17 @@ export class Tab1Page {
 
   day = new Date().getDay();
 
-  constructor() {}
+  names: any;
+
+  constructor(private http: ApiService) {
+    this.loadNameDay();
+  }
+
+  loadNameDay() {
+    this.http.getNameDay().subscribe((data) => {
+      this.names = data;
+      console.log(this.names.data.namedays.pl);
+      this.names = this.names.data.namedays.pl;
+    });
+  }
 }

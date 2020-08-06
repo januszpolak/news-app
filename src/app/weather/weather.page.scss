@@ -18,5 +18,15 @@
   }
   img {
     margin-top: 10%;
+    animation: move 5s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
   }
 }

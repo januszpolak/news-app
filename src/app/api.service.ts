@@ -18,4 +18,8 @@ export class ApiService {
       `https://api.openweathermap.org/data/2.5/weather?q=Krakow&appid=a051e71017506e78401e478e6128563d&units=metric`
     );
   }
+
+  getNameDay() {
+    return this.http.get("https://api.abalin.net/today?country=pl");
+  }
 }
