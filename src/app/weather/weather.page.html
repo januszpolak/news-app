@@ -2,19 +2,43 @@
   <div class="wrap">
     <h1>Pogoda w Krakowie</h1>
 
-    <p>Temperatura: {{ data.main.temp }} °C</p>
+    <p>Temperatura: {{ temp }} °C</p>
     <p>Temperatura odczuwalna: {{ data.main.feels_like }} °C</p>
     <p>Ciśnienie atmosferyczne: {{ data.main.pressure }} hPa</p>
 
     <img
-      *ngIf="desc == 'broken clouds'"
+      *ngIf="description == 'Clouds'"
       src="../../assets/clouds.png"
       alt="clouds"
       width="25%"
     />
     <img
-      *ngIf="desc == 'clear sky'"
+      *ngIf="description == 'Clear'"
       src="../../assets/sun.png"
+      alt="sun"
+      width="25%"
+    />
+    <img
+      *ngIf="description == 'Thunderstorm'"
+      src="../../assets/thunderstorm.png"
+      alt="sun"
+      width="25%"
+    />
+    <img
+      *ngIf="description == 'Drizzle'"
+      src="../../assets/rain.png"
+      alt="sun"
+      width="25%"
+    />
+    <img
+      *ngIf="description == 'Rain'"
+      src="../../assets/rain.png"
+      alt="sun"
+      width="25%"
+    />
+    <img
+      *ngIf="description == 'Snow'"
+      src="../../assets/snow.png"
       alt="sun"
       width="25%"
     />
